@@ -36,10 +36,12 @@ body {
 .button:hover {
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 .city{
     padding: 20px;
+    width: 400px;
     border-radius: 5px;
     border: 2px solid;
     border-color: black; 
