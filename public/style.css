@@ -1,0 +1,50 @@
+html {
+    height: 100vh;
+}
+body {
+    height: 100%;
+    margin: 0;
+}
+#content{
+    display: flex;
+    justify-content: center;
+    gap:2%;
+    height: 100%;
+}
+#menu{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:3%;
+    
+}
+#data{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:2%;
+}
+.button{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: black; 
+    
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+.city{
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: black; 
+}
+img{
+    max-width: 30px;
+    height: auto;
+}
