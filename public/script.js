@@ -1,6 +1,11 @@
 showData();
 function showData(filter = "all") {
-  apiURL = "https://restcountries.com/v3.1/"
+  selected = document.querySelectorAll(".selected");
+  if(selected.length > 0){
+    selected[0].classList.remove("selected");
+  }
+  document.getElementById(filter).classList.add("selected");
+  apiURL = "https://restcountries.com/v3.1"
 
   if (filter == "all") {
     apiURL = apiURL + "/"
@@ -14,12 +19,14 @@ function showData(filter = "all") {
     .then(data => {
       document.getElementById("data").innerHTML = "";
       for (let i = 0; i < data.length; i++) {
-        if (data[i].capital == undefined) {
-          continue
-        }
         myDiv = document.createElement("div")
-        myDiv.className = "city"
+        myDiv.className = "card"
         myDiv.innerHTML = "<img src=" + data[i].flags.png + "></img> " + data[i].translations.por.common
+        currency = ""
+        if(data[i].currencies != null){
+          currency = " - Currency: " + Object.entries(data[i].currencies)[0][1].name + " (" + Object.entries(data[i].currencies)[0][1].symbol + ")"
+        }
+        myDiv.innerHTML = myDiv.innerHTML + currency
         document.getElementById("data").appendChild(myDiv)
       }
     })

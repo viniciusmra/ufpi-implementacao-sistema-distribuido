@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>Implementação SD</title>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <section id="content">
         <section id="menu">
-            <div class="button" id="english" onclick="showData()">Todos</div>
+            <div class="button" class="selected" id="all" onclick="showData(this.id)">Todos</div>
             <div class="button" id="spanish" onclick="showData(this.id)">Espanhol</div>
             <div class="button" id="portuguese" onclick="showData(this.id)">Português</div>
             <div class="button" id="english" onclick="showData(this.id)">Inglês</div>
         </section>
         <section id="data"></section>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
