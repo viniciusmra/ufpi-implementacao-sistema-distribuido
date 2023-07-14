@@ -30,7 +30,8 @@ body {
     padding: 20px;
     border-radius: 5px;
     border: 2px solid;
-    border-color: black; 
+    border-color: black;
+    user-select: none;
     
 }
 
@@ -45,7 +46,8 @@ body {
     width: 400px;
     border-radius: 5px;
     border: 2px solid;
-    border-color: black; 
+    border-color: black;
+    
 }
 img{
     max-width: 30px;
