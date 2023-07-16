@@ -16,11 +16,12 @@ function getData(filter){
   }
   document.getElementById(filter).classList.add("selected");
 
-  // Chamada da back-end
+  
   if(filter != "all"){
     filter = `lang/${filter}`
   }
 
+  // Chamada da back-end
   fetch(`/get-data?data_filter=${filter}`)
     .then(response => response.json())
     .then(data => {
@@ -45,5 +46,4 @@ function showData(data){
     myDiv.innerHTML = myDiv.innerHTML + currency
     document.getElementById("data").appendChild(myDiv)
   }
-
 }
